@@ -2,8 +2,6 @@ import { Router } from 'express';
 import Usuarios from "../models/users.models.js";
 import Carts from "../models/carts.models.js";
 import passport from 'passport';
-import { passportCall } from "../middlewares/passport/passport-call.js";
-import { verifyRole } from "../middlewares/verify-role.js";
 import jwt from "jsonwebtoken";
 import config from "../config/config.js";
 
@@ -43,10 +41,6 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/api/us
 
 router.get('/faillogin', async (req, res) => {
   res.status(400).send({ error: 'error al iniciar sesion' })
-})
-
-router.get('/current', passportCall('jwt'), verifyRole('admin'), (req, res) => {
-  res.send(req.user)
 })
 
 router.post('/register', passport.authenticate('register', { failureRedirect: '/api/users/failregister' }), async (req, res) => {

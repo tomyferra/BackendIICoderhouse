@@ -15,9 +15,9 @@
 
 - [x] **Estrategias de Passport**: Desarrollar las estrategias de Passport para que funcionen con el modelo de usuarios creado.
 
-- [ ] **Sistema de Login**: Implementar un sistema de login del usuario que trabaje con JWT (JSON Web Tokens).
+- [x] **Sistema de Login**: Implementar un sistema de login del usuario que trabaje con JWT (JSON Web Tokens).
 
-- [ ] **Ruta de Validación**: Agregar al router `/api/sessions/` la ruta `/current`, que validará al usuario logueado y devolverá en una respuesta sus datos asociados al JWT.
+- [x] **Ruta de Validación**: Agregar al router `/api/sessions/` la ruta `/current`, que validará al usuario logueado y devolverá en una respuesta sus datos asociados al JWT.
 
 ## Criterios
 
@@ -26,18 +26,18 @@
     - [x] Que el modelo User incluya todos los campos requeridos.
     - [X] Que la contraseña se encripte correctamente y se almacene segura.
 
-- [ ] **Estrategias de Passport para Autorización y Autenticación**:
+- [x] **Estrategias de Passport para Autorización y Autenticación**:
     - [x] Estrategias de Passport desarrolladas y configuradas para el modelo de usuarios.
     - [x] Estrategias correctamente configuradas para autenticación/autorización.
-    - [ ] Implementada estrategia para autenticación JWT.
+    - [x] Implementada estrategia para autenticación JWT.
 
-- [ ] **Sistema de Login y Generación de Token JWT**:
-    - [ ] Sistema de login permite autenticarse y generar token JWT válido.
-    - [ ] Usuarios inician sesión exitosa y se asigna token.
-    - [ ] Token válido para acciones protegidas.
+- [x] **Sistema de Login y Generación de Token JWT**:
+    - [x] Sistema de login permite autenticarse y generar token JWT válido.
+    - [x] Usuarios inician sesión exitosa y se asigna token.
+    - [x] Token válido para acciones protegidas.
 
-- [ ] **Estrategia "Current" y Endpoint /api/sessions/current**:
+- [x] **Estrategia "Current" y Endpoint /api/sessions/current**:
     - [x] Implementar estrategia "current" para validar usuario y extraer datos.
-    - [ ] Estrategia extrae usuario del token JWT efectivamente.
-    - [ ] Token inválido devuelve error apropiado.
-    - [ ] Endpoint funciona y devuelve datos del usuario.
+    - [x] Estrategia extrae usuario del token JWT efectivamente.
+    - [x] Token inválido devuelve error apropiado.
+    - [x] Endpoint funciona y devuelve datos del usuario.

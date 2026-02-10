@@ -4,6 +4,7 @@ import Usuarios from "../models/users.models.js";
 import Carts from "../models/carts.models.js";
 import { hashPassword, isValidPassword } from "../utils/utils.js";
 import jwt from "passport-jwt";
+import config from "../config/config.js";
 
 const LocalStrategy = local.Strategy;
 const JWTStrategy = jwt.Strategy;
@@ -12,7 +13,7 @@ const ExtractJWT = jwt.ExtractJwt;
 const cookieExtractor = (req) => {
     let token = null
     if (req && req.headers) {
-        token = req.headers.authorization.split(' ')[1]
+        token = req.headers.authorization?.split(' ')[1]
     }
     return token
 }
@@ -21,7 +22,7 @@ const initializePassport = () => {
 
     passport.use('jwt', new JWTStrategy({
         jwtFromRequest: ExtractJWT.fromExtractors([cookieExtractor]),
-        secretOrKey: 'tomasferraribackend2'
+        secretOrKey: config.JWT_SECRET
     }, async (jwt_payload, done) => {
         try {
             return done(null, jwt_payload)
